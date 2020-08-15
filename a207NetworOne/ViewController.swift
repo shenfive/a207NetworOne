@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,WKUIDelegate {
 
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var theWeb: WKWebView!
@@ -17,12 +17,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var goButton: UIButton!
     @IBOutlet weak var urlAddTF: UITextField!
     var timer:Timer? = nil
+    @IBOutlet weak var preBtn: UIButton!
+    @IBOutlet weak var nextBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(getNetworkStatus(sender:)), userInfo: nil, repeats: true)
-        
         
         openURL(urlString: "www.apple.com")
         goButton.isEnabled = false
@@ -57,10 +58,33 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func goPrePage(_ sender: Any) {
+        theWeb.goBack()
+    }
     
+    @IBAction func goNextPage(_ sender: Any) {
+        theWeb.goForward()
+    }
     
     
     @objc func getNetworkStatus(sender:Any?)->Bool{
+        
+        if theWeb.isLoading == true{
+            print("web status : isLoading")
+        }else{
+            print("web status: finished")
+        }
+        
+//        if theWeb.canGoBack == true{
+//            preBtn.isEnabled = true
+//        }
+        
+        preBtn.isEnabled = theWeb.canGoBack
+        nextBtn.isEnabled = theWeb.canGoForward
+        
+        
+        
+        
         if Reachability(hostName: "www.apple.com")?.currentReachabilityStatus().rawValue == 0 {
             goButton.isEnabled = false
             if status.text != "沒網路"{
@@ -76,6 +100,11 @@ class ViewController: UIViewController {
             status.text = "有網路"
             return true
         }
+        
+
+        
+        
+        
     }
 
 }

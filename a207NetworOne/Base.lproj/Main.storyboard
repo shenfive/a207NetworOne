@@ -48,6 +48,22 @@
                                     <action selector="openWeb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ykH-WE-Dch"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMy-Fd-CHI">
+                                <rect key="frame" x="125" y="44" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="前一頁"/>
+                                <connections>
+                                    <action selector="goPrePage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QK3-oZ-58l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwu-4E-tpu">
+                                <rect key="frame" x="216" y="44" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="下一頁"/>
+                                <connections>
+                                    <action selector="goNextPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVg-Vq-Nlk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -67,6 +83,8 @@
                     </view>
                     <connections>
                         <outlet property="goButton" destination="Y6R-ef-m1j" id="Kw5-Dp-DvT"/>
+                        <outlet property="nextBtn" destination="xwu-4E-tpu" id="nUY-FG-C2O"/>
+                        <outlet property="preBtn" destination="gMy-Fd-CHI" id="igQ-Zy-ckQ"/>
                         <outlet property="status" destination="zlX-vP-ytV" id="vGs-YM-zwW"/>
                         <outlet property="theWeb" destination="UWN-lI-JDz" id="xme-8J-xeE"/>
                         <outlet property="urlAddTF" destination="XtN-EV-BxT" id="ZXx-6D-eOc"/>
