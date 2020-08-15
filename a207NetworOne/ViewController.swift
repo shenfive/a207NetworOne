@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var theWeb: WKWebView!
     
     var timer:Timer? = nil
     
@@ -18,6 +20,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(getNetworkStatus(sender:)), userInfo: nil, repeats: true)
+        
+        
+        if let url = URL(string: "https://www.apple.com.tw/"){
+            let request = URLRequest(url: url)
+            theWeb.load(request)
+        }
+        
+        
         
     }
 

@@ -16,26 +16,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlX-vP-ytV">
-                                <rect key="frame" x="186" y="133" width="42" height="21"/>
+                                <rect key="frame" x="0.0" y="44" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWN-lI-JDz">
+                                <rect key="frame" x="0.0" y="153" width="414" height="709"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="zlX-vP-ytV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QIu-83-OHf"/>
-                            <constraint firstItem="zlX-vP-ytV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="89" id="aKb-ao-5pZ"/>
+                            <constraint firstItem="UWN-lI-JDz" firstAttribute="top" secondItem="zlX-vP-ytV" secondAttribute="bottom" constant="88" id="6f1-kJ-MaE"/>
+                            <constraint firstItem="UWN-lI-JDz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CYQ-eo-sSJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UWN-lI-JDz" secondAttribute="bottom" id="aB4-fH-cA3"/>
+                            <constraint firstItem="zlX-vP-ytV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aKb-ao-5pZ"/>
+                            <constraint firstItem="zlX-vP-ytV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cwl-Fw-H8a"/>
+                            <constraint firstItem="UWN-lI-JDz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vb4-Aq-3br"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="status" destination="zlX-vP-ytV" id="vGs-YM-zwW"/>
+                        <outlet property="theWeb" destination="UWN-lI-JDz" id="xme-8J-xeE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="75"/>
+            <point key="canvasLocation" x="131.8840579710145" y="75"/>
         </scene>
     </scenes>
 </document>

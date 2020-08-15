@@ -14,6 +14,7 @@
 		BA204B5124E7C8F4006B70DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA204B5024E7C8F4006B70DB /* Assets.xcassets */; };
 		BA204B5424E7C8F4006B70DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA204B5224E7C8F4006B70DB /* LaunchScreen.storyboard */; };
 		BA204B5E24E7C924006B70DB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BA204B5C24E7C924006B70DB /* Reachability.m */; };
+		BA204B6124E7D06E006B70DB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA204B6024E7D06E006B70DB /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BA204B5B24E7C924006B70DB /* a207NetworOne-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "a207NetworOne-Bridging-Header.h"; sourceTree = "<group>"; };
 		BA204B5C24E7C924006B70DB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		BA204B5D24E7C924006B70DB /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		BA204B6024E7D06E006B70DB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA204B6124E7D06E006B70DB /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +49,7 @@
 			children = (
 				BA204B4624E7C8F3006B70DB /* a207NetworOne */,
 				BA204B4524E7C8F2006B70DB /* Products */,
+				BA204B5F24E7D06E006B70DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +76,14 @@
 				BA204B5B24E7C924006B70DB /* a207NetworOne-Bridging-Header.h */,
 			);
 			path = a207NetworOne;
+			sourceTree = "<group>";
+		};
+		BA204B5F24E7D06E006B70DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA204B6024E7D06E006B70DB /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
