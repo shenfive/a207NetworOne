@@ -10,11 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var status: UILabel!
+    
+    var timer:Timer? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(getNetworkStatus(sender:)), userInfo: nil, repeats: true)
+        
     }
 
+    @objc func getNetworkStatus(sender:Any?)->Bool{
+        if Reachability(hostName: "www.apple.com")?.currentReachabilityStatus().rawValue == 0 {
+            status.text = "沒網路"
+            return false
+        }else{
+            status.text = "有網路"
+            return true
+        }
+    }
 
 }
 
