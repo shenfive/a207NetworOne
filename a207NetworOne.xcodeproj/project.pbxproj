@@ -13,6 +13,7 @@
 		BA204B4F24E7C8F3006B70DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA204B4D24E7C8F3006B70DB /* Main.storyboard */; };
 		BA204B5124E7C8F4006B70DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA204B5024E7C8F4006B70DB /* Assets.xcassets */; };
 		BA204B5424E7C8F4006B70DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA204B5224E7C8F4006B70DB /* LaunchScreen.storyboard */; };
+		BA204B5E24E7C924006B70DB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BA204B5C24E7C924006B70DB /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		BA204B5024E7C8F4006B70DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA204B5324E7C8F4006B70DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA204B5524E7C8F4006B70DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA204B5B24E7C924006B70DB /* a207NetworOne-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "a207NetworOne-Bridging-Header.h"; sourceTree = "<group>"; };
+		BA204B5C24E7C924006B70DB /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		BA204B5D24E7C924006B70DB /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		BA204B4624E7C8F3006B70DB /* a207NetworOne */ = {
 			isa = PBXGroup;
 			children = (
+				BA204B5D24E7C924006B70DB /* Reachability.h */,
+				BA204B5C24E7C924006B70DB /* Reachability.m */,
 				BA204B4724E7C8F3006B70DB /* AppDelegate.swift */,
 				BA204B4924E7C8F3006B70DB /* SceneDelegate.swift */,
 				BA204B4B24E7C8F3006B70DB /* ViewController.swift */,
@@ -63,6 +69,7 @@
 				BA204B5024E7C8F4006B70DB /* Assets.xcassets */,
 				BA204B5224E7C8F4006B70DB /* LaunchScreen.storyboard */,
 				BA204B5524E7C8F4006B70DB /* Info.plist */,
+				BA204B5B24E7C924006B70DB /* a207NetworOne-Bridging-Header.h */,
 			);
 			path = a207NetworOne;
 			sourceTree = "<group>";
@@ -99,6 +106,7 @@
 				TargetAttributes = {
 					BA204B4324E7C8F2006B70DB = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -140,6 +148,7 @@
 			files = (
 				BA204B4C24E7C8F3006B70DB /* ViewController.swift in Sources */,
 				BA204B4824E7C8F3006B70DB /* AppDelegate.swift in Sources */,
+				BA204B5E24E7C924006B70DB /* Reachability.m in Sources */,
 				BA204B4A24E7C8F3006B70DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XSVW22JPST;
 				INFOPLIST_FILE = a207NetworOne/Info.plist;
@@ -293,6 +303,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = idev.sjw.a207NetworOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "a207NetworOne/a207NetworOne-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XSVW22JPST;
 				INFOPLIST_FILE = a207NetworOne/Info.plist;
@@ -311,6 +324,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = idev.sjw.a207NetworOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "a207NetworOne/a207NetworOne-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
