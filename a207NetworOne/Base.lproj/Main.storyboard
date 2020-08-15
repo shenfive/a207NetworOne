@@ -66,6 +66,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="goButton" destination="Y6R-ef-m1j" id="Kw5-Dp-DvT"/>
                         <outlet property="status" destination="zlX-vP-ytV" id="vGs-YM-zwW"/>
                         <outlet property="theWeb" destination="UWN-lI-JDz" id="xme-8J-xeE"/>
                         <outlet property="urlAddTF" destination="XtN-EV-BxT" id="ZXx-6D-eOc"/>

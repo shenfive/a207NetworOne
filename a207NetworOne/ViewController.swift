@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var theWeb: WKWebView!
     
+    @IBOutlet weak var goButton: UIButton!
     @IBOutlet weak var urlAddTF: UITextField!
     var timer:Timer? = nil
     
@@ -24,19 +25,29 @@ class ViewController: UIViewController {
         
         
         openURL(urlString: "www.apple.com")
-        
+        goButton.isEnabled = false
         
         
     }
 
     func openURL(urlString:String){
+//        if getNetworkStatus(sender: nil) == true {
+            let target = "https://" + urlString
+            
+            if let url = URL(string: target){
+                let request = URLRequest(url: url)
+                theWeb.load(request)
+            }
+            return
+//        }else{
+//            let alert = UIAlertController(title: "網路不穩", message: "請確認再試", preferredStyle: .alert)
+//            let action = UIAlertAction(title: "知道了", style: .default, handler: nil  )
+//            alert.addAction(action)
+//            present(alert, animated: true, completion: nil)
+//        }
         
-        let target = "https://" + urlString
         
-        if let url = URL(string: target){
-            let request = URLRequest(url: url)
-            theWeb.load(request)
-        }
+
     }
     
     
@@ -51,9 +62,17 @@ class ViewController: UIViewController {
     
     @objc func getNetworkStatus(sender:Any?)->Bool{
         if Reachability(hostName: "www.apple.com")?.currentReachabilityStatus().rawValue == 0 {
+            goButton.isEnabled = false
+            if status.text != "沒網路"{
+                let alert = UIAlertController(title: "網路不穩", message: "請確認再試", preferredStyle: .alert)
+                let action = UIAlertAction(title: "知道了", style: .default, handler: nil  )
+                alert.addAction(action)
+                present(alert, animated: true, completion: nil)
+            }
             status.text = "沒網路"
             return false
         }else{
+            goButton.isEnabled = true
             status.text = "有網路"
             return true
         }
